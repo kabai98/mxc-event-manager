@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <h1>Login</h1>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Email</label>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="email" type="email" placeholder="example@domain.com" />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+          Kérjük, érvényes email címet adjon meg!
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="password" [type]="hidePassword ? 'password' : 'text'" />
+        <button
+          type="button"
+          mat-icon-button
+          matSuffix
+          (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidePassword"
+        >
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <div class="button-row">
+      <button
+        type="submit"
+        mat-flat-button
+        color="primary"
+        class="login-btn"
+        [disabled]="loginForm.invalid"
+      >
+        Bejelentkezés
+      </button>
+    </div>
+  </form>
+</div>

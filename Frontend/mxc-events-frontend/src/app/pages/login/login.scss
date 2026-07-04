@@ -1,0 +1,58 @@
+.login-wrapper {
+  padding: 40px;
+  max-width: 450px;
+  margin: 60px auto; /* Középre igazítja az oldalon */
+  font-family: Roboto, sans-serif;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: left;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 16px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    mat-form-field {
+      width: 100%;
+
+      // Szögletesebb sarkok az input mezőknek a konzisztencia miatt
+      ::v-deep .mdc-notched-outline__leading,
+      ::v-deep .mdc-notched-outline__notch,
+      ::v-deep .mdc-notched-outline__trailing {
+        border-radius: 4px !important;
+      }
+    }
+  }
+
+  .button-row {
+    margin-top: 24px;
+
+    .login-btn {
+      background-color: #179cd8 !important; // A megszokott élénk kék szín
+      color: white;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 6px;
+      width: 100%; // Teljes szélességű gomb a tipikus login élményért
+      height: 48px;
+
+      &:disabled {
+        background-color: #cccccc !important;
+        color: #666666;
+      }
+    }
+  }
+}
