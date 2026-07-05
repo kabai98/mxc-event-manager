@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Mxc.EventManager.Api.Data.Seeders;
 
 namespace Mxc.EventManager.Api.Services;
 
