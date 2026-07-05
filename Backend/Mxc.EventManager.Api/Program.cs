@@ -1,13 +1,24 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Mxc.EventManager.Api;
 using Mxc.EventManager.Api.Contracts;
 using Mxc.EventManager.Api.Data;
+using Mxc.EventManager.Api.Endpoints;
+using Mxc.EventManager.Api.Middleware;
 using Mxc.EventManager.Api.Services;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy("DevCors", policy =>
+	{
+		policy
+			.AllowAnyOrigin()
+			.AllowAnyHeader()
+			.AllowAnyMethod();
+	});
+});
 
 var connectionString = builder.Configuration
 	.GetConnectionString("DefaultConnection");
@@ -36,9 +47,12 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.MapEventsEndpoints();
 
 app.UseMiddleware<ExceptionMiddleware>();
 
@@ -49,7 +63,12 @@ if (app.Environment.IsDevelopment())
 {
 	app.MapOpenApi();
 }
+app.MapScalarApiReference(options =>
+{
+	options.Title = "My API";
+});
 
+app.UseCors("DevCors");
 
 app.UseHttpsRedirection();
 

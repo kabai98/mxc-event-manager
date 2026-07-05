@@ -1,4 +1,4 @@
-﻿namespace Mxc.EventManager.Api;
+﻿namespace Mxc.EventManager.Api.Middleware;
 
 public class ExceptionMiddleware
 {

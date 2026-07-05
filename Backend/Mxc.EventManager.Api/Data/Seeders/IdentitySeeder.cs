@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Mxc.EventManager.Api.Services;
+namespace Mxc.EventManager.Api.Data.Seeders;
 
 public static class IdentitySeeder
 {

@@ -8,3 +8,6 @@ Content-Type: application/json
   "email": "userlocalh@ostfff2",
   "password": "assword!"
 }
+
+###
+GET {{Mxc.EventManager.Api_HostAddress}}/api/events
