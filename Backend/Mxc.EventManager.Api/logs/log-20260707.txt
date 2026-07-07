@@ -1,0 +1,2009 @@
+2026-07-07 12:49:38.495 +02:00 [ERR] Failed executing DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [EventManagerDb];
+2026-07-07 12:54:44.491 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 12:54:44.733 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 12:54:44.778 +02:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 12:54:44.919 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 12:54:44.938 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 12:54:44.943 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 12:54:44.983 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 12:54:44.995 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 12:54:45.008 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 12:54:45.064 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 12:54:45.165 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 12:54:45.302 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 12:54:45.921 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:54:46.051 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:54:46.058 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:54:46.062 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 12:54:46.442 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 12:54:46.443 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 12:54:46.516 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 12:54:46.526 +02:00 [INF] Hosting environment: Development
+2026-07-07 12:54:46.543 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 12:54:47.499 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 12:54:47.718 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:54:47.726 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 12:54:47.728 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:54:47.733 +02:00 [INF] HTTP GET /scalar responded 302 in 40.5084 ms
+2026-07-07 12:54:47.745 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 258.2098ms
+2026-07-07 12:54:47.751 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 12:54:47.762 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:54:47.948 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 12:54:47.970 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:54:47.972 +02:00 [INF] HTTP GET /scalar/ responded 200 in 212.1678 ms
+2026-07-07 12:54:47.997 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 245.3602ms
+2026-07-07 12:54:48.028 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 12:54:48.028 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 12:54:48.028 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 12:54:48.038 +02:00 [INF] CORS policy execution successful.
+2026-07-07 12:54:48.038 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 12:54:48.041 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 12:54:48.053 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 12:54:48.054 +02:00 [INF] Sending file with download name ''.
+2026-07-07 12:54:48.054 +02:00 [INF] Sending file with download name ''.
+2026-07-07 12:54:48.064 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 36.5704ms
+2026-07-07 12:54:48.068 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 12:54:48.074 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 36.4763 ms
+2026-07-07 12:54:48.083 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 54.9311ms
+2026-07-07 12:54:48.169 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 12:54:48.183 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 147.9675 ms
+2026-07-07 12:54:48.193 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.9458ms
+2026-07-07 12:54:48.196 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 168.0336ms
+2026-07-07 12:54:48.638 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 12:54:48.645 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 12:54:48.679 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 12:54:48.682 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 36.5741 ms
+2026-07-07 12:54:48.686 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 48.1213ms
+2026-07-07 12:54:59.533 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:54:59.550 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:54:59.560 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:54:59.563 +02:00 [INF] HTTP GET /api/events responded 401 in 21.8185 ms
+2026-07-07 12:54:59.567 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 34.218ms
+2026-07-07 12:55:01.716 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:55:01.725 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:55:01.727 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:55:01.729 +02:00 [INF] HTTP GET /api/events responded 401 in 4.8175 ms
+2026-07-07 12:55:01.731 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 15.5946ms
+2026-07-07 12:55:33.576 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/1?=1 - null null
+2026-07-07 12:55:33.585 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:55:33.587 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:55:33.590 +02:00 [INF] HTTP GET /api/events/1 responded 401 in 7.1916 ms
+2026-07-07 12:55:33.593 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/1?=1 - 401 0 null 16.9432ms
+2026-07-07 12:55:58.682 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 12:55:58.756 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 12:55:58.782 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 12:55:58.871 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 12:55:58.890 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 12:55:58.894 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 12:55:58.906 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 12:55:58.918 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 12:55:58.924 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 12:55:58.977 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 12:55:59.060 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 12:55:59.124 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 12:55:59.650 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:55:59.767 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:55:59.780 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 12:55:59.787 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 12:56:00.102 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 12:56:00.103 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 12:56:00.330 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 12:56:00.332 +02:00 [INF] Hosting environment: Development
+2026-07-07 12:56:00.333 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 12:56:00.666 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 12:56:00.854 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:56:00.861 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 12:56:00.866 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:56:00.871 +02:00 [INF] HTTP GET /scalar responded 302 in 42.2090 ms
+2026-07-07 12:56:00.881 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 225.0505ms
+2026-07-07 12:56:00.890 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 12:56:00.903 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:56:01.080 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 12:56:01.101 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 12:56:01.103 +02:00 [INF] HTTP GET /scalar/ responded 200 in 201.6839 ms
+2026-07-07 12:56:01.108 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 217.8393ms
+2026-07-07 12:56:01.147 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 12:56:01.147 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 12:56:01.159 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 12:56:01.148 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 12:56:01.206 +02:00 [INF] Sending file with download name ''.
+2026-07-07 12:56:01.199 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 12:56:01.208 +02:00 [INF] CORS policy execution successful.
+2026-07-07 12:56:01.220 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 73.0673ms
+2026-07-07 12:56:01.225 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 12:56:01.248 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 12:56:01.263 +02:00 [INF] Sending file with download name ''.
+2026-07-07 12:56:01.264 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 12:56:01.265 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 110.0144 ms
+2026-07-07 12:56:01.266 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 58.9335 ms
+2026-07-07 12:56:01.269 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 121.2742ms
+2026-07-07 12:56:01.270 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 121.8611ms
+2026-07-07 12:56:01.297 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.5128ms
+2026-07-07 12:56:01.749 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 12:56:01.755 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 12:56:01.819 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 12:56:01.868 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 113.6459 ms
+2026-07-07 12:56:01.872 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 122.9832ms
+2026-07-07 12:56:30.699 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 115
+2026-07-07 12:56:30.705 +02:00 [INF] CORS policy execution successful.
+2026-07-07 12:56:30.707 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 12:56:30.837 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 12:56:31.057 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 12:56:31.078 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 12:56:31.087 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 12:56:31.088 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 382.8878 ms
+2026-07-07 12:56:31.098 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 399.332ms
+2026-07-07 12:56:49.588 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:56:49.603 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:56:49.613 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:56:49.616 +02:00 [INF] HTTP GET /api/events responded 401 in 21.1141 ms
+2026-07-07 12:56:49.620 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 31.9102ms
+2026-07-07 12:58:39.081 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 115
+2026-07-07 12:58:39.090 +02:00 [INF] CORS policy execution successful.
+2026-07-07 12:58:39.094 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 12:58:39.113 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 12:58:39.220 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 12:58:39.228 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 12:58:39.230 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 12:58:39.232 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 142.3635 ms
+2026-07-07 12:58:39.236 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 155.5457ms
+2026-07-07 12:59:11.984 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:11.992 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:11.994 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:11.998 +02:00 [INF] HTTP GET /api/events responded 401 in 6.8735 ms
+2026-07-07 12:59:12.002 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 17.5264ms
+2026-07-07 12:59:12.771 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:12.782 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:12.789 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:12.792 +02:00 [INF] HTTP GET /api/events responded 401 in 11.2472 ms
+2026-07-07 12:59:12.798 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 26.4608ms
+2026-07-07 12:59:13.206 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:13.214 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:13.216 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:13.218 +02:00 [INF] HTTP GET /api/events responded 401 in 4.6445 ms
+2026-07-07 12:59:13.221 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 14.8311ms
+2026-07-07 12:59:13.361 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:13.367 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:13.369 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:13.370 +02:00 [INF] HTTP GET /api/events responded 401 in 3.0119 ms
+2026-07-07 12:59:13.372 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 10.9051ms
+2026-07-07 12:59:40.882 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:40.891 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:40.894 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:40.897 +02:00 [INF] HTTP GET /api/events responded 401 in 6.9365 ms
+2026-07-07 12:59:40.901 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 18.9018ms
+2026-07-07 12:59:41.406 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:41.412 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:41.415 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:41.416 +02:00 [INF] HTTP GET /api/events responded 401 in 4.0971 ms
+2026-07-07 12:59:41.419 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 13.1082ms
+2026-07-07 12:59:43.672 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:43.678 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:43.681 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:43.684 +02:00 [INF] HTTP GET /api/events responded 401 in 6.3913 ms
+2026-07-07 12:59:43.687 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 14.4945ms
+2026-07-07 12:59:43.855 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:43.861 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:43.864 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:43.866 +02:00 [INF] HTTP GET /api/events responded 401 in 5.2351 ms
+2026-07-07 12:59:43.869 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 13.3275ms
+2026-07-07 12:59:45.414 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:45.421 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:45.425 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:45.428 +02:00 [INF] HTTP GET /api/events responded 401 in 6.9818 ms
+2026-07-07 12:59:45.431 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 16.4003ms
+2026-07-07 12:59:46.841 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 12:59:46.848 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 12:59:46.851 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 12:59:46.853 +02:00 [INF] HTTP GET /api/events responded 401 in 5.7512 ms
+2026-07-07 12:59:46.857 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 15.6189ms
+2026-07-07 13:01:18.894 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:01:18.933 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 13:01:18.935 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 13:01:18.937 +02:00 [INF] HTTP GET /api/events responded 401 in 3.4869 ms
+2026-07-07 13:01:18.940 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 45.9383ms
+2026-07-07 13:03:50.779 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:50.795 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:50.805 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:50.910 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:50.917 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:50.924 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:50.929 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:50.935 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:50.940 +02:00 [INF] HTTP GET /api/events responded 200 in 150.4809 ms
+2026-07-07 13:03:50.946 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 168.1828ms
+2026-07-07 13:03:54.574 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:54.579 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:54.584 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:54.592 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:54.600 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:54.604 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:54.607 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:54.609 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:54.610 +02:00 [INF] HTTP GET /api/events responded 200 in 31.3458 ms
+2026-07-07 13:03:54.612 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 38.2515ms
+2026-07-07 13:03:55.058 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:55.125 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.154 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:55.167 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:55.179 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:55.183 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:55.186 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:55.188 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.191 +02:00 [INF] HTTP GET /api/events responded 200 in 66.7424 ms
+2026-07-07 13:03:55.193 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 135.8937ms
+2026-07-07 13:03:55.318 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:55.323 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.324 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:55.328 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:55.330 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:55.334 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:55.336 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:55.337 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.338 +02:00 [INF] HTTP GET /api/events responded 200 in 16.0154 ms
+2026-07-07 13:03:55.341 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 22.6351ms
+2026-07-07 13:03:55.474 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:55.480 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.484 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:55.489 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:55.494 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:55.495 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:55.496 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:55.501 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.504 +02:00 [INF] HTTP GET /api/events responded 200 in 24.9048 ms
+2026-07-07 13:03:55.508 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 34.323ms
+2026-07-07 13:03:55.650 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:55.658 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.660 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:55.663 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:55.675 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:55.677 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:55.679 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:55.680 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.687 +02:00 [INF] HTTP GET /api/events responded 200 in 29.0882 ms
+2026-07-07 13:03:55.692 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 41.1164ms
+2026-07-07 13:03:55.824 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:03:55.828 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.830 +02:00 [INF] Retrieving all events.
+2026-07-07 13:03:55.838 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:03:55.841 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:03:55.843 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:03:55.844 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:03:55.846 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:03:55.849 +02:00 [INF] HTTP GET /api/events responded 200 in 21.4230 ms
+2026-07-07 13:03:55.852 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 28.5994ms
+2026-07-07 13:04:24.678 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/3 - null null
+2026-07-07 13:04:24.687 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:04:24.691 +02:00 [INF] Retrieving event with Id 3.
+2026-07-07 13:04:24.710 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:04:24.719 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:04:24.721 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:04:24.722 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:04:24.725 +02:00 [INF] HTTP GET /api/events/3 responded 200 in 39.2750 ms
+2026-07-07 13:04:24.730 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/3 - 200 null application/json; charset=utf-8 51.5001ms
+2026-07-07 13:04:51.111 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/3 - null null
+2026-07-07 13:04:51.117 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:04:51.119 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 13:04:51.126 +02:00 [INF] Deleting event with Id 3.
+2026-07-07 13:04:51.178 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:04:51.185 +02:00 [INF] Event with Id 3 deleted successfully.
+2026-07-07 13:04:51.187 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 13:04:51.190 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 13:04:51.192 +02:00 [INF] HTTP DELETE /api/events/3 responded 204 in 74.4096 ms
+2026-07-07 13:04:51.194 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/3 - 204 null null 83.3113ms
+2026-07-07 13:30:50.728 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:30:50.728 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:30:50.734 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:50.738 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:50.741 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 6.2950 ms
+2026-07-07 13:30:50.741 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 2.5906 ms
+2026-07-07 13:30:50.746 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 17.7676ms
+2026-07-07 13:30:50.743 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 14.7189ms
+2026-07-07 13:30:59.271 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:30:59.271 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:30:59.279 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:59.286 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:59.288 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 1.8106 ms
+2026-07-07 13:30:59.287 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 8.0285 ms
+2026-07-07 13:30:59.290 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 18.4644ms
+2026-07-07 13:30:59.293 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 21.4821ms
+2026-07-07 13:30:59.296 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 13:30:59.296 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 13:30:59.302 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:59.306 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:59.308 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:30:59.310 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:30:59.411 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 13:30:59.459 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 13:30:59.522 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 13:30:59.528 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 13:30:59.530 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:30:59.533 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 231.0532 ms
+2026-07-07 13:30:59.535 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 239.1708ms
+2026-07-07 13:30:59.567 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:30:59.573 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:30:59.577 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 13:30:59.579 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 13:30:59.581 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 13:30:59.584 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 13:30:59.584 +02:00 [INF] HTTP GET /api/events responded 401 in 11.6974 ms
+2026-07-07 13:30:59.586 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:30:59.588 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 21.5281ms
+2026-07-07 13:30:59.590 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 283.2579 ms
+2026-07-07 13:30:59.598 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 301.4581ms
+2026-07-07 13:31:08.231 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:31:08.242 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 13:31:08.244 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 13:31:08.247 +02:00 [INF] HTTP GET /api/events responded 401 in 4.9321 ms
+2026-07-07 13:31:08.250 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 null null 19.744ms
+2026-07-07 13:34:48.599 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:34:48.601 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 13:34:48.605 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:34:48.608 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:34:48.609 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 4.6338 ms
+2026-07-07 13:34:48.612 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 13.29ms
+2026-07-07 13:34:48.610 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 2.2521 ms
+2026-07-07 13:34:48.618 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 13:34:48.629 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 28.2218ms
+2026-07-07 13:34:48.631 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 13:34:48.654 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:34:48.663 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:34:48.664 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:34:48.665 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:34:48.672 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 13:34:48.672 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 13:34:48.781 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 13:34:48.782 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 13:34:48.789 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 13:34:48.790 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 13:34:48.792 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:34:48.797 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 142.6174 ms
+2026-07-07 13:34:48.794 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:34:48.800 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 182.055ms
+2026-07-07 13:34:48.801 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 138.2552 ms
+2026-07-07 13:34:48.810 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 178.5324ms
+2026-07-07 13:34:48.828 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:34:48.834 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:34:48.837 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-07 13:34:48.840 +02:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2026-07-07 13:34:48.842 +02:00 [INF] HTTP GET /api/events responded 401 in 7.6128 ms
+2026-07-07 13:34:48.846 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 401 0 null 18.1461ms
+2026-07-07 13:37:07.488 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:37:07.491 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:07.492 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.1960 ms
+2026-07-07 13:37:07.498 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 9.9572ms
+2026-07-07 13:37:07.501 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:37:07.505 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:07.507 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:11.025 +02:00 [INF] Retrieving all events.
+2026-07-07 13:37:11.036 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:37:11.040 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:37:11.041 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:37:11.043 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:37:11.045 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:11.048 +02:00 [INF] HTTP GET /api/events responded 200 in 3542.5521 ms
+2026-07-07 13:37:11.051 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 3550.4633ms
+2026-07-07 13:37:16.568 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:37:16.589 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:16.592 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 3.2079 ms
+2026-07-07 13:37:16.598 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 29.4121ms
+2026-07-07 13:37:16.619 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:37:16.626 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:16.633 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:20.089 +02:00 [INF] Retrieving all events.
+2026-07-07 13:37:20.097 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:37:20.103 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:37:20.105 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:37:20.107 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:37:20.109 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:20.112 +02:00 [INF] HTTP GET /api/events responded 200 in 3485.8308 ms
+2026-07-07 13:37:20.116 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 3497.5558ms
+2026-07-07 13:37:43.458 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:37:43.466 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:43.468 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.3590 ms
+2026-07-07 13:37:43.471 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 12.2558ms
+2026-07-07 13:37:43.477 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/events - application/json 74
+2026-07-07 13:37:43.490 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:43.493 +02:00 [INF] Executing endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 13:37:52.331 +02:00 [INF] Creating a new event with name Valami event.
+2026-07-07 13:37:53.020 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 100), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Events] ([Capacity], [Country], [Location], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-07-07 13:37:53.066 +02:00 [INF] Event created successfully with Id 4002.
+2026-07-07 13:37:54.548 +02:00 [INF] Setting HTTP status code 201.
+2026-07-07 13:37:54.552 +02:00 [INF] Writing value of type '<>f__AnonymousType2`1' as Json.
+2026-07-07 13:37:54.556 +02:00 [INF] Executed endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 13:37:54.557 +02:00 [INF] HTTP POST /api/events responded 201 in 11067.5908 ms
+2026-07-07 13:37:54.561 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/events - 201 null application/json; charset=utf-8 11084.3949ms
+2026-07-07 13:37:54.599 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:37:54.636 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:54.642 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 6.7673 ms
+2026-07-07 13:37:54.644 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 45.1035ms
+2026-07-07 13:37:54.648 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:37:54.663 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:37:54.664 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:55.666 +02:00 [INF] Retrieving all events.
+2026-07-07 13:37:55.675 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:37:55.680 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 13:37:56.649 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:37:56.652 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:37:56.655 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:37:56.658 +02:00 [INF] HTTP GET /api/events responded 200 in 2004.9849 ms
+2026-07-07 13:37:56.662 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 2013.6812ms
+2026-07-07 13:38:02.511 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4002 - null null
+2026-07-07 13:38:02.514 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:38:02.515 +02:00 [INF] HTTP OPTIONS /api/events/4002 responded 204 in 1.0355 ms
+2026-07-07 13:38:02.517 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4002 - 204 null null 5.7732ms
+2026-07-07 13:38:02.520 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/4002 - null null
+2026-07-07 13:38:02.527 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:38:02.528 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 13:38:04.692 +02:00 [INF] Deleting event with Id 4002.
+2026-07-07 13:38:05.487 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:38:06.883 +02:00 [INF] Event with Id 4002 deleted successfully.
+2026-07-07 13:38:08.954 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 13:38:08.957 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 13:38:09.878 +02:00 [INF] HTTP DELETE /api/events/4002 responded 204 in 7350.8450 ms
+2026-07-07 13:38:09.882 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/4002 - 204 null null 7361.6267ms
+2026-07-07 13:39:49.087 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 13:39:49.153 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 13:39:49.179 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 13:39:49.323 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 13:39:49.341 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 13:39:49.347 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 13:39:49.356 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 13:39:49.368 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 13:39:49.376 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 13:39:49.427 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 13:39:49.513 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 13:39:49.570 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 13:39:50.082 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:39:50.196 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:39:50.203 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:39:50.212 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 13:39:50.498 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 13:39:50.500 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 13:39:50.764 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 13:39:50.778 +02:00 [INF] Hosting environment: Development
+2026-07-07 13:39:50.779 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 13:39:51.165 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 13:39:51.393 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:39:51.399 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 13:39:51.401 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:39:51.405 +02:00 [INF] HTTP GET /scalar responded 302 in 43.7453 ms
+2026-07-07 13:39:51.416 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 259.8367ms
+2026-07-07 13:39:51.426 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 13:39:51.437 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:39:51.620 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 13:39:51.641 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:39:51.642 +02:00 [INF] HTTP GET /scalar/ responded 200 in 206.5449 ms
+2026-07-07 13:39:51.652 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 225.5197ms
+2026-07-07 13:39:51.673 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 13:39:51.674 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 13:39:51.674 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 13:39:51.682 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:39:51.686 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 13:39:51.686 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 13:39:51.696 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 13:39:51.697 +02:00 [INF] Sending file with download name ''.
+2026-07-07 13:39:51.697 +02:00 [INF] Sending file with download name ''.
+2026-07-07 13:39:51.702 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 28.9553ms
+2026-07-07 13:39:51.706 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 13:39:51.716 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 34.9044 ms
+2026-07-07 13:39:51.731 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 57.4814ms
+2026-07-07 13:39:51.738 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 13:39:51.746 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 63.0008 ms
+2026-07-07 13:39:51.768 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 94.2155ms
+2026-07-07 13:39:51.778 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.9474ms
+2026-07-07 13:39:52.195 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 13:39:52.204 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 13:39:52.241 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 13:39:52.243 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 39.8946 ms
+2026-07-07 13:39:52.250 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 54.8266ms
+2026-07-07 13:40:05.358 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:40:05.365 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:40:05.369 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 4.4712 ms
+2026-07-07 13:40:05.371 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 13.9157ms
+2026-07-07 13:40:05.393 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:40:05.411 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:40:05.438 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:40:08.567 +02:00 [INF] Retrieving all events.
+2026-07-07 13:40:41.135 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:40:41.947 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:47:30.883 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 13:47:30.954 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 13:47:30.983 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 13:47:31.089 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 13:47:31.107 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 13:47:31.112 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 13:47:31.123 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 13:47:31.134 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 13:47:31.139 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 13:47:31.181 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 13:47:31.289 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 13:47:31.347 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 13:47:31.909 +02:00 [INF] Executed DbCommand (48ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:47:32.122 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:47:32.130 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 13:47:32.134 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 13:47:32.407 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 13:47:32.409 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 13:47:32.702 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 13:47:32.704 +02:00 [INF] Hosting environment: Development
+2026-07-07 13:47:32.712 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 13:47:32.782 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 13:47:33.065 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:47:33.071 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 13:47:33.074 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:47:33.078 +02:00 [INF] HTTP GET /scalar responded 302 in 40.3714 ms
+2026-07-07 13:47:33.090 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 322.9716ms
+2026-07-07 13:47:33.097 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 13:47:33.109 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:47:33.286 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 13:47:33.310 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 13:47:33.313 +02:00 [INF] HTTP GET /scalar/ responded 200 in 206.1160 ms
+2026-07-07 13:47:33.321 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 223.7271ms
+2026-07-07 13:47:33.353 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 13:47:33.353 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 13:47:33.353 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 13:47:33.360 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 13:47:33.365 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:47:33.370 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 13:47:33.376 +02:00 [INF] Sending file with download name ''.
+2026-07-07 13:47:33.376 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 23.3482ms
+2026-07-07 13:47:33.378 +02:00 [INF] Sending file with download name ''.
+2026-07-07 13:47:33.381 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 13:47:33.386 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 13:47:33.390 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 26.6881 ms
+2026-07-07 13:47:33.393 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 39.41ms
+2026-07-07 13:47:33.432 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 13:47:33.448 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.7106ms
+2026-07-07 13:47:33.459 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 101.4432 ms
+2026-07-07 13:47:33.466 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 112.5843ms
+2026-07-07 13:47:33.918 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 13:47:33.928 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 13:47:33.970 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 13:47:33.977 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 49.7282 ms
+2026-07-07 13:47:33.980 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 61.5416ms
+2026-07-07 13:47:42.915 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:47:42.921 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:47:43.019 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 98.6342 ms
+2026-07-07 13:47:43.087 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 171.3873ms
+2026-07-07 13:47:43.092 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:47:43.100 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:47:43.126 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:47:44.936 +02:00 [INF] Retrieving all events.
+2026-07-07 13:47:45.042 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:47:45.050 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:47:45.058 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:47:45.063 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:47:45.072 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:47:45.075 +02:00 [INF] HTTP GET /api/events responded 200 in 1975.1200 ms
+2026-07-07 13:47:45.084 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 1992.7454ms
+2026-07-07 13:48:50.516 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:48:50.521 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:48:50.522 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.4790 ms
+2026-07-07 13:48:50.531 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 14.7649ms
+2026-07-07 13:48:50.535 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:48:50.541 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:48:50.546 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:48:52.308 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:48:52.700 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:48:57.183 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:48:57.187 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:48:57.189 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:48:57.191 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 6649.9276 ms
+2026-07-07 13:48:57.195 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 6660.1289ms
+2026-07-07 13:49:00.552 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:49:00.559 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:00.560 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.4183 ms
+2026-07-07 13:49:00.564 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 11.7574ms
+2026-07-07 13:49:00.568 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 82
+2026-07-07 13:49:00.573 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:00.578 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:49:00.605 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:49:00.611 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:49:00.614 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:49:00.616 +02:00 [INF] HTTP PUT /api/events/4 responded 400 in 43.0844 ms
+2026-07-07 13:49:00.620 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 400 null application/json; charset=utf-8 52.244ms
+2026-07-07 13:49:12.705 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:49:12.710 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:12.712 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.9755 ms
+2026-07-07 13:49:12.716 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 10.5745ms
+2026-07-07 13:49:38.207 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:49:38.213 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:38.214 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.1448 ms
+2026-07-07 13:49:38.216 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 9.4326ms
+2026-07-07 13:49:38.254 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:49:38.266 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:38.272 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:49:40.223 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:49:40.232 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:49:40.237 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:49:40.241 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:49:40.242 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:49:40.244 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 1977.7889 ms
+2026-07-07 13:49:40.247 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 1992.7257ms
+2026-07-07 13:49:42.994 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:49:43.064 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:43.071 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 21.1692 ms
+2026-07-07 13:49:43.073 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 79.0676ms
+2026-07-07 13:49:43.077 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 82
+2026-07-07 13:49:43.082 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:49:43.083 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:49:43.087 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:49:43.088 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:49:43.090 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:49:43.092 +02:00 [INF] HTTP PUT /api/events/4 responded 400 in 10.0946 ms
+2026-07-07 13:49:43.094 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 400 null application/json; charset=utf-8 16.8575ms
+2026-07-07 13:50:42.104 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 115
+2026-07-07 13:50:42.109 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:50:42.111 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:50:42.137 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 13:50:42.311 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 13:50:42.329 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 13:50:42.337 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 13:50:42.340 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 230.4374 ms
+2026-07-07 13:50:42.343 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 239.759ms
+2026-07-07 13:52:19.084 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 110
+2026-07-07 13:52:19.089 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:52:19.090 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:52:19.096 +02:00 [INF] Updating event with Id 4.
+2026-07-07 13:52:23.325 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Capacity], [e].[Country], [e].[Location], [e].[Name]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @p
+2026-07-07 13:52:27.729 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Events] SET [Name] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-07-07 13:52:28.378 +02:00 [INF] Event with Id 4 updated successfully.
+2026-07-07 13:52:30.026 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 13:52:30.028 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:52:30.029 +02:00 [INF] HTTP PUT /api/events/4 responded 204 in 10941.0140 ms
+2026-07-07 13:52:30.032 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 204 null null 10947.9964ms
+2026-07-07 13:52:33.667 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:52:36.485 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:52:36.487 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 2816.5303 ms
+2026-07-07 13:52:36.490 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 2823.2399ms
+2026-07-07 13:52:36.493 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:52:36.498 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:52:36.501 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:52:37.254 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:52:37.262 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:52:37.270 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:52:37.274 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:52:37.276 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:52:37.278 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 779.3147 ms
+2026-07-07 13:52:37.281 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 787.7758ms
+2026-07-07 13:53:30.855 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:53:30.859 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:53:30.860 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.3740 ms
+2026-07-07 13:53:30.866 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 10.9771ms
+2026-07-07 13:53:30.870 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:53:30.874 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:53:30.875 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:54:43.928 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:54:43.962 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:54:43.962 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:54:43.962 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:54:43.966 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:54:43.991 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:54:43.994 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:43.998 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:44.002 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:44.006 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:44.012 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:54:44.013 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 19.0547 ms
+2026-07-07 13:54:44.014 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 16.0849 ms
+2026-07-07 13:54:44.015 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 12.8958 ms
+2026-07-07 13:54:44.017 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 11.4746 ms
+2026-07-07 13:54:44.019 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:54:44.022 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 60.3815ms
+2026-07-07 13:54:44.028 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 62.8077ms
+2026-07-07 13:54:44.024 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 62.3587ms
+2026-07-07 13:54:44.026 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 64.3717ms
+2026-07-07 13:54:44.035 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:54:44.040 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:54:44.051 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 73177.7067 ms
+2026-07-07 13:54:44.057 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:44.059 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 499 null application/json; charset=utf-8 73189.0534ms
+2026-07-07 13:54:44.060 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:54:44.682 +02:00 [INF] Retrieving all events.
+2026-07-07 13:54:44.690 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:54:44.695 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:54:44.696 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:54:44.699 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:54:44.703 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:54:44.707 +02:00 [INF] HTTP GET /api/events responded 200 in 650.2938 ms
+2026-07-07 13:54:44.709 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 669.3767ms
+2026-07-07 13:54:47.510 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:54:47.521 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:47.527 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 5.5023 ms
+2026-07-07 13:54:47.531 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 22.1433ms
+2026-07-07 13:54:47.536 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/2 - null null
+2026-07-07 13:54:47.543 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:54:47.545 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:54:54.277 +02:00 [INF] Retrieving event with Id 2.
+2026-07-07 13:54:54.825 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:54:57.741 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:54:57.742 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:54:57.763 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:54:57.766 +02:00 [INF] HTTP GET /api/events/2 responded 200 in 10222.2731 ms
+2026-07-07 13:54:57.769 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/2 - 200 null application/json; charset=utf-8 10233.149ms
+2026-07-07 13:55:01.519 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:55:01.528 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:01.529 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 1.1065 ms
+2026-07-07 13:55:01.534 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 14.7422ms
+2026-07-07 13:55:06.874 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:55:06.876 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:06.877 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.2693 ms
+2026-07-07 13:55:06.883 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 9.0738ms
+2026-07-07 13:55:06.886 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:55:09.569 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:09.571 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:55:10.173 +02:00 [INF] Retrieving all events.
+2026-07-07 13:55:10.179 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:55:10.186 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:55:10.189 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:55:10.192 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:55:10.194 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:55:10.198 +02:00 [INF] HTTP GET /api/events responded 200 in 3307.2752 ms
+2026-07-07 13:55:10.202 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 3316.4781ms
+2026-07-07 13:55:14.850 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:55:14.858 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:14.860 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.8740 ms
+2026-07-07 13:55:14.868 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 17.7507ms
+2026-07-07 13:55:14.871 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:55:14.881 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:14.884 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:55:16.344 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:55:16.352 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:55:16.360 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:55:16.361 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:55:16.363 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:55:16.365 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 1484.0808 ms
+2026-07-07 13:55:16.369 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 1497.6146ms
+2026-07-07 13:55:21.865 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:55:21.871 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:21.873 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 2.4808 ms
+2026-07-07 13:55:21.875 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 10.2422ms
+2026-07-07 13:55:21.879 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 79
+2026-07-07 13:55:21.886 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:21.889 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:55:21.891 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:55:21.892 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:55:21.893 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:55:21.895 +02:00 [INF] HTTP PUT /api/events/4 responded 400 in 9.4606 ms
+2026-07-07 13:55:21.899 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 400 null application/json; charset=utf-8 19.7303ms
+2026-07-07 13:55:49.448 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:55:49.452 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:49.454 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.3027 ms
+2026-07-07 13:55:49.460 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 11.6473ms
+2026-07-07 13:55:49.463 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:55:49.470 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:49.472 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:55:51.026 +02:00 [INF] Retrieving all events.
+2026-07-07 13:55:51.033 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:55:51.039 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:55:51.040 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:55:51.041 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:55:51.043 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:55:51.044 +02:00 [INF] HTTP GET /api/events responded 200 in 1573.7666 ms
+2026-07-07 13:55:51.051 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 1587.8244ms
+2026-07-07 13:55:55.020 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:55:55.030 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:55.032 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 2.3709 ms
+2026-07-07 13:55:55.036 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 15.3179ms
+2026-07-07 13:55:55.040 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 13:55:55.047 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:55:55.048 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:55:56.503 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 13:55:56.508 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:55:56.515 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:55:56.518 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:55:56.520 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:55:56.523 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 1475.5621 ms
+2026-07-07 13:55:56.525 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 1485.1694ms
+2026-07-07 13:56:00.025 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 13:56:00.032 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:56:00.033 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.5495 ms
+2026-07-07 13:56:00.036 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 10.8666ms
+2026-07-07 13:56:00.040 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 80
+2026-07-07 13:56:00.050 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:56:00.051 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:56:00.053 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:56:00.055 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:56:00.057 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:56:00.059 +02:00 [INF] HTTP PUT /api/events/4 responded 400 in 9.0275 ms
+2026-07-07 13:56:00.062 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 400 null application/json; charset=utf-8 22.2972ms
+2026-07-07 13:57:37.611 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:57:37.617 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:37.618 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.1926 ms
+2026-07-07 13:57:37.620 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 8.7229ms
+2026-07-07 13:57:37.631 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:57:37.635 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:37.636 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:57:39.068 +02:00 [INF] Retrieving all events.
+2026-07-07 13:57:39.075 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:57:39.082 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:57:39.083 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:57:39.085 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:57:39.086 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:57:39.089 +02:00 [INF] HTTP GET /api/events responded 200 in 1453.6396 ms
+2026-07-07 13:57:39.091 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 1460.3137ms
+2026-07-07 13:57:40.925 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:57:40.933 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:40.934 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 0.9779 ms
+2026-07-07 13:57:40.941 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 15.8422ms
+2026-07-07 13:57:40.943 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/2 - null null
+2026-07-07 13:57:40.948 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:40.949 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:57:42.644 +02:00 [INF] Retrieving event with Id 2.
+2026-07-07 13:57:42.650 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:57:42.658 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:57:42.660 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:57:42.662 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:57:42.664 +02:00 [INF] HTTP GET /api/events/2 responded 200 in 1715.5654 ms
+2026-07-07 13:57:42.667 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/2 - 200 null application/json; charset=utf-8 1724.0567ms
+2026-07-07 13:57:45.793 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:57:45.798 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:45.799 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 1.0359 ms
+2026-07-07 13:57:45.802 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 9.5864ms
+2026-07-07 13:57:45.805 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2 - application/json 88
+2026-07-07 13:57:45.813 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:45.815 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:45.817 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:57:45.819 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:57:45.822 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:45.823 +02:00 [INF] HTTP PUT /api/events/2 responded 400 in 10.3727 ms
+2026-07-07 13:57:45.828 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2 - 400 null application/json; charset=utf-8 22.5578ms
+2026-07-07 13:57:47.837 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2 - application/json 88
+2026-07-07 13:57:47.844 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:47.845 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:47.847 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:57:47.848 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:57:47.849 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:47.851 +02:00 [INF] HTTP PUT /api/events/2 responded 400 in 7.3262 ms
+2026-07-07 13:57:47.854 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2 - 400 null application/json; charset=utf-8 17.5459ms
+2026-07-07 13:57:48.274 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2 - application/json 88
+2026-07-07 13:57:48.280 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:48.282 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:48.283 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:57:48.284 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:57:48.286 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:48.289 +02:00 [INF] HTTP PUT /api/events/2 responded 400 in 8.5207 ms
+2026-07-07 13:57:48.296 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2 - 400 null application/json; charset=utf-8 21.173ms
+2026-07-07 13:57:48.440 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2 - application/json 88
+2026-07-07 13:57:48.446 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:57:48.448 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:48.453 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:57:48.456 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:57:48.459 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:57:48.461 +02:00 [INF] HTTP PUT /api/events/2 responded 400 in 14.7454 ms
+2026-07-07 13:57:48.463 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2 - 400 null application/json; charset=utf-8 23.5696ms
+2026-07-07 13:58:47.546 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:58:47.550 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:58:47.552 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 1.2768 ms
+2026-07-07 13:58:47.554 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 8.4369ms
+2026-07-07 13:58:47.556 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/2 - null null
+2026-07-07 13:58:47.564 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:58:47.566 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:58:49.288 +02:00 [INF] Retrieving event with Id 2.
+2026-07-07 13:58:49.296 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:58:49.303 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:58:49.304 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:58:49.305 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:58:49.307 +02:00 [INF] HTTP GET /api/events/2 responded 200 in 1742.3800 ms
+2026-07-07 13:58:49.311 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/2 - 200 null application/json; charset=utf-8 1755.0611ms
+2026-07-07 13:58:56.896 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2 - null null
+2026-07-07 13:58:56.903 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:58:56.905 +02:00 [INF] HTTP OPTIONS /api/events/2 responded 204 in 2.0406 ms
+2026-07-07 13:58:56.907 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2 - 204 null null 11.2106ms
+2026-07-07 13:58:56.910 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2 - application/json 87
+2026-07-07 13:58:56.919 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:58:56.921 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:58:56.923 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 13:58:56.925 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 13:58:56.928 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 13:58:56.930 +02:00 [INF] HTTP PUT /api/events/2 responded 400 in 10.8378 ms
+2026-07-07 13:58:56.934 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2 - 400 null application/json; charset=utf-8 23.735ms
+2026-07-07 13:59:52.151 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 13:59:52.155 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:59:52.156 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.0945 ms
+2026-07-07 13:59:52.158 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 6.8622ms
+2026-07-07 13:59:52.161 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 13:59:52.165 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:59:52.166 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:59:53.600 +02:00 [INF] Retrieving all events.
+2026-07-07 13:59:53.606 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 13:59:53.610 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 13:59:53.611 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:59:53.612 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 13:59:53.614 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 13:59:53.616 +02:00 [INF] HTTP GET /api/events responded 200 in 1451.2988 ms
+2026-07-07 13:59:53.619 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 1458.0589ms
+2026-07-07 13:59:56.225 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/6 - null null
+2026-07-07 13:59:56.238 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:59:56.241 +02:00 [INF] HTTP OPTIONS /api/events/6 responded 204 in 2.8567 ms
+2026-07-07 13:59:56.247 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/6 - 204 null null 21.3789ms
+2026-07-07 13:59:56.250 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/6 - null null
+2026-07-07 13:59:56.258 +02:00 [INF] CORS policy execution successful.
+2026-07-07 13:59:56.260 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:59:58.606 +02:00 [INF] Retrieving event with Id 6.
+2026-07-07 13:59:58.614 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 13:59:58.621 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 13:59:58.623 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 13:59:58.625 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 13:59:58.627 +02:00 [INF] HTTP GET /api/events/6 responded 200 in 2368.8107 ms
+2026-07-07 13:59:58.630 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/6 - 200 null application/json; charset=utf-8 2379.5886ms
+2026-07-07 14:00:02.420 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/6 - null null
+2026-07-07 14:00:02.426 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:00:02.428 +02:00 [INF] HTTP OPTIONS /api/events/6 responded 204 in 2.0997 ms
+2026-07-07 14:00:02.432 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/6 - 204 null null 12.11ms
+2026-07-07 14:00:02.435 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/6 - application/json 87
+2026-07-07 14:00:02.441 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:00:02.442 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:00:02.444 +02:00 [INF] Setting HTTP status code 400.
+2026-07-07 14:00:02.445 +02:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-07-07 14:00:02.448 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:00:02.449 +02:00 [INF] HTTP PUT /api/events/6 responded 400 in 7.9125 ms
+2026-07-07 14:00:02.451 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/6 - 400 null application/json; charset=utf-8 16.7262ms
+2026-07-07 14:01:43.959 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:01:43.969 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:01:43.971 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.6632 ms
+2026-07-07 14:01:43.974 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 14.8953ms
+2026-07-07 14:01:43.977 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:01:43.984 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:01:43.985 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:02:13.368 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 14:02:13.448 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 14:02:13.481 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 14:02:13.587 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 14:02:13.622 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 14:02:13.630 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 14:02:13.656 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 14:02:13.666 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 14:02:13.677 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 14:02:13.727 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 14:02:13.804 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 14:02:13.858 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 14:02:14.370 +02:00 [INF] Executed DbCommand (44ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:02:14.483 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:02:14.493 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:02:14.500 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 14:02:14.797 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 14:02:14.799 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 14:02:15.097 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 14:02:15.121 +02:00 [INF] Hosting environment: Development
+2026-07-07 14:02:15.123 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 14:02:15.233 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 14:02:15.420 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:02:15.429 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 14:02:15.431 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:02:15.435 +02:00 [INF] HTTP GET /scalar responded 302 in 45.7063 ms
+2026-07-07 14:02:15.447 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 225.8266ms
+2026-07-07 14:02:15.453 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 14:02:15.465 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:02:15.637 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 14:02:15.660 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:02:15.661 +02:00 [INF] HTTP GET /scalar/ responded 200 in 197.5788 ms
+2026-07-07 14:02:15.666 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 213.3506ms
+2026-07-07 14:02:15.698 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 14:02:15.698 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 14:02:15.698 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 14:02:15.704 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:15.709 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 14:02:15.711 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 14:02:15.720 +02:00 [INF] Sending file with download name ''.
+2026-07-07 14:02:15.721 +02:00 [INF] Sending file with download name ''.
+2026-07-07 14:02:15.726 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 27.788ms
+2026-07-07 14:02:15.728 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 14:02:15.732 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 29.2744 ms
+2026-07-07 14:02:15.734 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 14:02:15.735 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 36.3636ms
+2026-07-07 14:02:15.758 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 14:02:15.762 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 55.7765 ms
+2026-07-07 14:02:15.765 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 66.6848ms
+2026-07-07 14:02:15.796 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.2619ms
+2026-07-07 14:02:16.248 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 14:02:16.252 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 14:02:16.281 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 14:02:16.283 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 31.4550 ms
+2026-07-07 14:02:16.287 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 63.6404ms
+2026-07-07 14:02:19.401 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:02:19.406 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:19.408 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.9040 ms
+2026-07-07 14:02:19.411 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 10.4784ms
+2026-07-07 14:02:19.414 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:02:19.418 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:19.437 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:02:25.482 +02:00 [INF] Retrieving all events.
+2026-07-07 14:02:25.584 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:02:25.594 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:02:25.599 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:02:25.604 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:02:25.610 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:02:25.612 +02:00 [INF] HTTP GET /api/events responded 200 in 6194.6593 ms
+2026-07-07 14:02:25.620 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 6206.9207ms
+2026-07-07 14:02:28.932 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 14:02:28.942 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:28.945 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 2.7929 ms
+2026-07-07 14:02:28.949 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 17.0913ms
+2026-07-07 14:02:28.952 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 14:02:28.962 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:28.964 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:02:30.512 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 14:02:30.529 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:02:30.535 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:02:30.538 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 14:02:30.541 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:02:30.543 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 1581.0927 ms
+2026-07-07 14:02:30.546 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 1594.36ms
+2026-07-07 14:02:33.851 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 14:02:33.858 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:33.860 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.6461 ms
+2026-07-07 14:02:33.866 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 15.3811ms
+2026-07-07 14:02:33.869 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 86
+2026-07-07 14:02:33.878 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:33.881 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:02:41.784 +02:00 [INF] Updating event with Id 4.
+2026-07-07 14:02:42.243 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Capacity], [e].[Country], [e].[Location], [e].[Name]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @p
+2026-07-07 14:02:42.374 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Events] SET [Capacity] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-07-07 14:02:42.393 +02:00 [INF] Event with Id 4 updated successfully.
+2026-07-07 14:02:44.536 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:02:44.540 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:02:45.926 +02:00 [INF] HTTP PUT /api/events/4 responded 204 in 12048.1577 ms
+2026-07-07 14:02:45.930 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 204 null null 12061.2588ms
+2026-07-07 14:02:45.978 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:02:45.988 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:45.989 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 7.2683 ms
+2026-07-07 14:02:45.991 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 12.8364ms
+2026-07-07 14:02:45.995 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:02:47.021 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:02:47.023 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:02:47.831 +02:00 [INF] Retrieving all events.
+2026-07-07 14:02:48.341 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:02:49.293 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:02:50.645 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:02:50.647 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:02:50.668 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:02:50.671 +02:00 [INF] HTTP GET /api/events responded 200 in 4672.3798 ms
+2026-07-07 14:02:50.674 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 4678.1959ms
+2026-07-07 14:03:00.776 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 14:03:00.781 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:00.783 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1.5431 ms
+2026-07-07 14:03:00.787 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 11.1701ms
+2026-07-07 14:03:00.789 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/4 - null null
+2026-07-07 14:03:00.795 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:00.796 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:03:02.433 +02:00 [INF] Retrieving event with Id 4.
+2026-07-07 14:03:02.441 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:03:02.447 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:03:02.448 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 14:03:02.450 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:03:02.452 +02:00 [INF] HTTP GET /api/events/4 responded 200 in 1657.1075 ms
+2026-07-07 14:03:02.454 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/4 - 200 null application/json; charset=utf-8 1664.927ms
+2026-07-07 14:03:04.956 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4 - null null
+2026-07-07 14:03:06.205 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:06.209 +02:00 [INF] HTTP OPTIONS /api/events/4 responded 204 in 1245.6777 ms
+2026-07-07 14:03:06.213 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4 - 204 null null 1256.1841ms
+2026-07-07 14:03:06.216 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/4 - application/json 88
+2026-07-07 14:03:06.222 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:06.223 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:03:06.226 +02:00 [INF] Updating event with Id 4.
+2026-07-07 14:03:06.232 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Capacity], [e].[Country], [e].[Location], [e].[Name]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @p
+2026-07-07 14:03:06.261 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Events] SET [Capacity] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-07-07 14:03:06.265 +02:00 [INF] Event with Id 4 updated successfully.
+2026-07-07 14:03:06.267 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:03:06.268 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:03:06.269 +02:00 [INF] HTTP PUT /api/events/4 responded 204 in 47.4929 ms
+2026-07-07 14:03:06.271 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/4 - 204 null null 55.7644ms
+2026-07-07 14:03:06.297 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:03:06.302 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:06.304 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.9334 ms
+2026-07-07 14:03:06.308 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 11.0542ms
+2026-07-07 14:03:06.310 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:03:06.318 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:06.319 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:03:07.026 +02:00 [INF] Retrieving all events.
+2026-07-07 14:03:07.035 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:03:07.039 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:03:07.041 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:03:07.044 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:03:07.046 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:03:07.047 +02:00 [INF] HTTP GET /api/events responded 200 in 729.2978 ms
+2026-07-07 14:03:07.050 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 740.2081ms
+2026-07-07 14:03:20.261 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:03:20.267 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:20.270 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.9665 ms
+2026-07-07 14:03:20.275 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 13.9934ms
+2026-07-07 14:03:20.277 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/events - application/json 82
+2026-07-07 14:03:20.285 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:20.286 +02:00 [INF] Executing endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:03:20.293 +02:00 [INF] Executed endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:03:20.317 +02:00 [ERR] Unhandled exception occurred. Path: /api/events
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to read parameter "EventDto eventDto" from the request body as JSON.
+ ---> System.Text.Json.JsonException: The JSON value could not be converted to System.Int32. Path: $.id | LineNumber: 0 | BytePositionInLine: 81.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'Null' as a number.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedNumber(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetInt32(Int32& value)
+   at System.Text.Json.Serialization.Converters.Int32Converter.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling handling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.Log.InvalidJsonRequestBody(HttpContext httpContext, String parameterTypeName, String parameterName, Exception exception, Boolean shouldThrow)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Mxc.EventManager.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api\Middleware\ExceptionMiddleware.cs:line 22
+2026-07-07 14:03:20.375 +02:00 [ERR] HTTP POST /api/events responded 500 in 90.3597 ms
+2026-07-07 14:03:20.380 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/events - 500 null application/json; charset=utf-8 102.641ms
+2026-07-07 14:03:31.611 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:03:31.618 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:03:31.620 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.2450 ms
+2026-07-07 14:03:31.624 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 12.0788ms
+2026-07-07 14:04:19.877 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:04:19.881 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:04:19.883 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.5485 ms
+2026-07-07 14:04:19.885 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 8.2246ms
+2026-07-07 14:05:36.333 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:05:36.337 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:05:36.339 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 2.1635 ms
+2026-07-07 14:05:36.347 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 13.5465ms
+2026-07-07 14:05:36.349 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:05:36.355 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:05:36.359 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:05:38.912 +02:00 [INF] Retrieving all events.
+2026-07-07 14:05:38.920 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:05:38.926 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:05:38.927 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:05:38.928 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:05:38.930 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:05:38.931 +02:00 [INF] HTTP GET /api/events responded 200 in 2576.3552 ms
+2026-07-07 14:05:38.934 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 2584.5315ms
+2026-07-07 14:06:21.024 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:06:21.030 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:06:21.031 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.3251 ms
+2026-07-07 14:06:21.036 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 11.9635ms
+2026-07-07 14:06:21.074 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:06:21.078 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:06:21.080 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:06:24.212 +02:00 [INF] Retrieving all events.
+2026-07-07 14:06:24.222 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:06:24.228 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:06:24.230 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:06:24.231 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:06:24.234 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:06:24.238 +02:00 [INF] HTTP GET /api/events responded 200 in 3160.4783 ms
+2026-07-07 14:06:24.242 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 3167.6672ms
+2026-07-07 14:08:40.317 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:08:40.320 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:08:40.321 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.1168 ms
+2026-07-07 14:08:40.324 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 7.0128ms
+2026-07-07 14:08:40.329 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:08:40.332 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:08:40.333 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:08:43.489 +02:00 [INF] Retrieving all events.
+2026-07-07 14:08:43.496 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:08:43.503 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:08:43.504 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:08:43.506 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:08:43.509 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:08:43.512 +02:00 [INF] HTTP GET /api/events responded 200 in 3180.5543 ms
+2026-07-07 14:08:43.515 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 3186.6785ms
+2026-07-07 14:08:48.246 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:08:48.262 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:08:48.263 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.1022 ms
+2026-07-07 14:08:48.267 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 20.5802ms
+2026-07-07 14:08:48.269 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/events - application/json 71
+2026-07-07 14:08:48.277 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:08:48.278 +02:00 [INF] Executing endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:09:00.474 +02:00 [INF] Creating a new event with name ewqewq.
+2026-07-07 14:09:00.529 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 100), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Events] ([Capacity], [Country], [Location], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-07-07 14:09:00.551 +02:00 [INF] Event created successfully with Id 4003.
+2026-07-07 14:09:02.028 +02:00 [INF] Setting HTTP status code 201.
+2026-07-07 14:09:02.033 +02:00 [INF] Writing value of type '<>f__AnonymousType2`1' as Json.
+2026-07-07 14:09:02.049 +02:00 [INF] Executed endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:09:02.051 +02:00 [INF] HTTP POST /api/events responded 201 in 13774.0146 ms
+2026-07-07 14:09:02.054 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/events - 201 null application/json; charset=utf-8 13784.9622ms
+2026-07-07 14:09:02.086 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:09:02.093 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:09:02.095 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 5.0336 ms
+2026-07-07 14:09:02.098 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 11.7045ms
+2026-07-07 14:09:02.101 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:09:02.108 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:09:02.110 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:09:02.113 +02:00 [INF] Retrieving all events.
+2026-07-07 14:09:02.116 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:09:02.120 +02:00 [INF] Successfully retrieved 14 events.
+2026-07-07 14:09:02.121 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:09:02.123 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:09:02.125 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:09:02.127 +02:00 [INF] HTTP GET /api/events responded 200 in 18.6017 ms
+2026-07-07 14:09:02.129 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 28.0807ms
+2026-07-07 14:09:05.852 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/4003 - null null
+2026-07-07 14:09:05.860 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:09:05.861 +02:00 [INF] HTTP OPTIONS /api/events/4003 responded 204 in 1.6496 ms
+2026-07-07 14:09:05.865 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/4003 - 204 null null 12.407ms
+2026-07-07 14:09:05.866 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/4003 - null null
+2026-07-07 14:09:07.512 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:09:07.521 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:09:08.194 +02:00 [INF] Deleting event with Id 4003.
+2026-07-07 14:09:08.238 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:09:08.243 +02:00 [INF] Event with Id 4003 deleted successfully.
+2026-07-07 14:09:08.245 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:09:08.247 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:09:08.248 +02:00 [INF] HTTP DELETE /api/events/4003 responded 204 in 2374.1296 ms
+2026-07-07 14:09:08.250 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/4003 - 204 null null 2383.8094ms
+2026-07-07 14:11:44.108 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:11:44.161 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:11:44.168 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 7.0885 ms
+2026-07-07 14:11:44.171 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 62.716ms
+2026-07-07 14:11:44.174 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:11:44.183 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:11:44.184 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:44.188 +02:00 [INF] Retrieving all events.
+2026-07-07 14:11:44.193 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:11:44.205 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:11:44.206 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:11:44.208 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:11:44.209 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:44.216 +02:00 [INF] HTTP GET /api/events responded 200 in 32.9967 ms
+2026-07-07 14:11:44.233 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 59.5787ms
+2026-07-07 14:11:53.513 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:11:53.521 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:11:53.522 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.5787 ms
+2026-07-07 14:11:53.530 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 13.3686ms
+2026-07-07 14:11:53.535 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:11:53.538 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:11:53.540 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:53.541 +02:00 [INF] Retrieving all events.
+2026-07-07 14:11:53.549 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:11:53.553 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:11:53.554 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:11:53.556 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:11:53.558 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:53.563 +02:00 [INF] HTTP GET /api/events responded 200 in 25.0783 ms
+2026-07-07 14:11:53.566 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 31.0217ms
+2026-07-07 14:11:57.443 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:11:57.447 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:11:57.448 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:57.450 +02:00 [INF] Retrieving all events.
+2026-07-07 14:11:57.456 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:11:57.463 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:11:57.466 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:11:57.467 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:11:57.472 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:11:57.476 +02:00 [INF] HTTP GET /api/events responded 200 in 28.9478 ms
+2026-07-07 14:11:57.481 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 37.9631ms
+2026-07-07 14:12:00.686 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:12:00.690 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:00.691 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.4690 ms
+2026-07-07 14:12:00.695 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 8.8396ms
+2026-07-07 14:12:00.707 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:12:00.716 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:00.718 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:00.721 +02:00 [INF] Retrieving all events.
+2026-07-07 14:12:00.725 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:12:00.731 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:12:00.733 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:12:00.735 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:12:00.737 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:00.740 +02:00 [INF] HTTP GET /api/events responded 200 in 23.9535 ms
+2026-07-07 14:12:00.746 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 38.5294ms
+2026-07-07 14:12:46.693 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 14:12:46.696 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 14:12:46.700 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:46.707 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 7.5957 ms
+2026-07-07 14:12:46.708 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:46.711 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 17.7471ms
+2026-07-07 14:12:46.713 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 5.4452 ms
+2026-07-07 14:12:46.714 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 14:12:46.722 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 27.3533ms
+2026-07-07 14:12:46.726 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 14:12:46.727 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:46.734 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:46.737 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:12:46.739 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:12:46.780 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 14:12:46.810 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 14:12:46.955 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 14:12:46.956 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 14:12:46.970 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 14:12:46.970 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 14:12:46.977 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:12:46.977 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:12:46.979 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 244.2102 ms
+2026-07-07 14:12:46.980 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 253.2727 ms
+2026-07-07 14:12:46.982 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 256.1933ms
+2026-07-07 14:12:46.985 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 271.9082ms
+2026-07-07 14:12:47.013 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:12:47.019 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:47.020 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.7826 ms
+2026-07-07 14:12:47.023 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 10.2123ms
+2026-07-07 14:12:47.030 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:12:47.034 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:47.038 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:47.039 +02:00 [INF] Retrieving all events.
+2026-07-07 14:12:47.043 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:12:47.047 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:12:47.049 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:12:47.050 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:12:47.054 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:47.056 +02:00 [INF] HTTP GET /api/events responded 200 in 22.0527 ms
+2026-07-07 14:12:47.058 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 28.1378ms
+2026-07-07 14:12:54.860 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:12:54.866 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:54.870 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 3.7039 ms
+2026-07-07 14:12:54.875 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 16.4811ms
+2026-07-07 14:12:54.877 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:12:54.889 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:12:54.891 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:54.892 +02:00 [INF] Retrieving all events.
+2026-07-07 14:12:54.896 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:12:54.902 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:12:54.904 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:12:54.906 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:12:54.907 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:12:54.909 +02:00 [INF] HTTP GET /api/events responded 200 in 19.4938 ms
+2026-07-07 14:12:54.911 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 33.8771ms
+2026-07-07 14:19:21.658 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 14:19:21.728 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-07 14:19:21.763 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-07 14:19:21.875 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-07 14:19:21.894 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-07 14:19:21.899 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-07 14:19:21.914 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-07 14:19:21.926 +02:00 [INF] No migrations were applied. The database is already up to date.
+2026-07-07 14:19:21.934 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-07 14:19:21.996 +02:00 [INF] User profile is available. Using 'C:\Users\qb3tt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-07 14:19:22.126 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-07-07 14:19:22.206 +02:00 [INF] Starting Identity user seeding...
+2026-07-07 14:19:22.731 +02:00 [INF] Executed DbCommand (49ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:19:22.852 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:19:22.862 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-07 14:19:22.867 +02:00 [INF] Identity user seeding completed successfully.
+2026-07-07 14:19:23.205 +02:00 [INF] Now listening on: https://localhost:7175
+2026-07-07 14:19:23.206 +02:00 [INF] Now listening on: http://localhost:5228
+2026-07-07 14:19:23.557 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-07 14:19:23.581 +02:00 [INF] Hosting environment: Development
+2026-07-07 14:19:23.593 +02:00 [INF] Content root path: C:\Users\qb3tt\source\repos\mxc-event-manager\Backend\Mxc.EventManager.Api
+2026-07-07 14:19:23.632 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar - null null
+2026-07-07 14:19:23.834 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:19:23.841 +02:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-07-07 14:19:23.842 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:19:23.846 +02:00 [INF] HTTP GET /scalar responded 302 in 36.2673 ms
+2026-07-07 14:19:23.858 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar - 302 null null 240.3637ms
+2026-07-07 14:19:23.884 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/ - null null
+2026-07-07 14:19:23.914 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:19:24.173 +02:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-07-07 14:19:24.195 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-07-07 14:19:24.197 +02:00 [INF] HTTP GET /scalar/ responded 200 in 284.6121 ms
+2026-07-07 14:19:24.210 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/ - 200 null text/html 325.8564ms
+2026-07-07 14:19:24.219 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-07 14:19:24.222 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - null null
+2026-07-07 14:19:24.222 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/scalar/scalar.js - null null
+2026-07-07 14:19:24.233 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:24.236 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 14:19:24.237 +02:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 14:19:24.254 +02:00 [INF] Sending file with download name ''.
+2026-07-07 14:19:24.254 +02:00 [INF] Sending file with download name ''.
+2026-07-07 14:19:24.262 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 14945 application/javascript; charset=utf-8 42.4541ms
+2026-07-07 14:19:24.264 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2026-07-07 14:19:24.268 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-07-07 14:19:24.274 +02:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 42.2620 ms
+2026-07-07 14:19:24.279 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 56.8461ms
+2026-07-07 14:19:24.342 +02:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-07-07 14:19:24.409 +02:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 175.3842 ms
+2026-07-07 14:19:24.413 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/scalar/scalar.js - 200 1070179 text/javascript 191.5151ms
+2026-07-07 14:19:24.436 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 172.0459ms
+2026-07-07 14:19:24.846 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/openapi/v1.json - null null
+2026-07-07 14:19:24.854 +02:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 14:19:24.886 +02:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-07-07 14:19:24.888 +02:00 [INF] HTTP GET /openapi/v1.json responded 200 in 33.9525 ms
+2026-07-07 14:19:24.891 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/openapi/v1.json - 200 null application/json;charset=utf-8 44.8821ms
+2026-07-07 14:19:28.657 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:19:28.671 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:28.674 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 3.4986 ms
+2026-07-07 14:19:28.676 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 19.2437ms
+2026-07-07 14:19:28.679 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:19:28.687 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:28.707 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:28.714 +02:00 [INF] Retrieving all events.
+2026-07-07 14:19:28.870 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:19:28.876 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:19:28.881 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:19:28.887 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:19:28.892 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:28.894 +02:00 [INF] HTTP GET /api/events responded 200 in 207.1506 ms
+2026-07-07 14:19:28.903 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 223.9558ms
+2026-07-07 14:19:32.684 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 14:19:32.684 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/auth/login - null null
+2026-07-07 14:19:32.692 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:32.697 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 4.9790 ms
+2026-07-07 14:19:32.698 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:32.701 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 17.0333ms
+2026-07-07 14:19:32.702 +02:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 4.6390 ms
+2026-07-07 14:19:32.704 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 14:19:32.712 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/auth/login - 204 null null 28.3131ms
+2026-07-07 14:19:32.714 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/auth/login - application/json 48
+2026-07-07 14:19:32.716 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:32.723 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:32.725 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:19:32.726 +02:00 [INF] Executing endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:19:32.779 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 14:19:32.805 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-07 14:19:32.995 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 14:19:33.029 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-07 14:19:33.049 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 14:19:33.049 +02:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2026-07-07 14:19:33.057 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:19:33.057 +02:00 [INF] Executed endpoint 'HTTP: POST api/auth/login'
+2026-07-07 14:19:33.060 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 336.4084 ms
+2026-07-07 14:19:33.061 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 345.5700 ms
+2026-07-07 14:19:33.064 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 349.5965ms
+2026-07-07 14:19:33.067 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/auth/login - 200 null application/json; charset=utf-8 362.3142ms
+2026-07-07 14:19:33.083 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:19:33.092 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:33.095 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:33.098 +02:00 [INF] Retrieving all events.
+2026-07-07 14:19:33.105 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:19:33.110 +02:00 [INF] Successfully retrieved 13 events.
+2026-07-07 14:19:33.112 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:19:33.113 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:19:33.115 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:33.120 +02:00 [INF] HTTP GET /api/events responded 200 in 28.0138 ms
+2026-07-07 14:19:33.122 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 38.8495ms
+2026-07-07 14:19:35.589 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/3002 - null null
+2026-07-07 14:19:35.593 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:35.595 +02:00 [INF] HTTP OPTIONS /api/events/3002 responded 204 in 2.3662 ms
+2026-07-07 14:19:35.601 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/3002 - 204 null null 11.9583ms
+2026-07-07 14:19:35.605 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/3002 - null null
+2026-07-07 14:19:35.614 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:35.622 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:19:37.031 +02:00 [INF] Deleting event with Id 3002.
+2026-07-07 14:19:37.083 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:19:37.089 +02:00 [INF] Event with Id 3002 deleted successfully.
+2026-07-07 14:19:37.091 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:19:37.092 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:19:37.094 +02:00 [INF] HTTP DELETE /api/events/3002 responded 204 in 1479.6092 ms
+2026-07-07 14:19:37.096 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/3002 - 204 null null 1491.7977ms
+2026-07-07 14:19:40.094 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - null null
+2026-07-07 14:19:40.100 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:40.101 +02:00 [INF] HTTP OPTIONS /api/events/2002 responded 204 in 1.6574 ms
+2026-07-07 14:19:40.105 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - 204 null null 10.5837ms
+2026-07-07 14:19:40.107 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events/2002 - null null
+2026-07-07 14:19:40.116 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:40.117 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:19:41.491 +02:00 [INF] Retrieving event with Id 2002.
+2026-07-07 14:19:41.506 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:19:41.510 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:19:41.512 +02:00 [INF] Writing value of type 'EventDto' as Json.
+2026-07-07 14:19:41.513 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/{id:int} => GetEventById'
+2026-07-07 14:19:41.515 +02:00 [INF] HTTP GET /api/events/2002 responded 200 in 1399.7372 ms
+2026-07-07 14:19:41.519 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events/2002 - 200 null application/json; charset=utf-8 1411.6791ms
+2026-07-07 14:19:46.535 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - null null
+2026-07-07 14:19:46.542 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:46.543 +02:00 [INF] HTTP OPTIONS /api/events/2002 responded 204 in 1.1474 ms
+2026-07-07 14:19:46.546 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - 204 null null 10.6256ms
+2026-07-07 14:19:46.550 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7175/api/events/2002 - application/json 96
+2026-07-07 14:19:46.557 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:46.558 +02:00 [INF] Executing endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:19:46.568 +02:00 [INF] Updating event with Id 2002.
+2026-07-07 14:19:46.620 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Capacity], [e].[Country], [e].[Location], [e].[Name]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @p
+2026-07-07 14:19:46.771 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Events] SET [Capacity] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-07-07 14:19:46.793 +02:00 [INF] Event with Id 2002 updated successfully.
+2026-07-07 14:19:46.795 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:19:46.797 +02:00 [INF] Executed endpoint 'HTTP: PUT /api/events/{id:int} => PutEvent'
+2026-07-07 14:19:46.800 +02:00 [INF] HTTP PUT /api/events/2002 responded 204 in 243.0368 ms
+2026-07-07 14:19:46.802 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7175/api/events/2002 - 204 null null 252.6698ms
+2026-07-07 14:19:46.841 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:19:46.845 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:46.846 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.8110 ms
+2026-07-07 14:19:46.852 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 13.8042ms
+2026-07-07 14:19:46.855 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:19:46.860 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:46.862 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:46.866 +02:00 [INF] Retrieving all events.
+2026-07-07 14:19:46.871 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:19:46.876 +02:00 [INF] Successfully retrieved 12 events.
+2026-07-07 14:19:46.878 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:19:46.882 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:19:46.885 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:19:46.887 +02:00 [INF] HTTP GET /api/events responded 200 in 26.6444 ms
+2026-07-07 14:19:46.890 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 35.041ms
+2026-07-07 14:19:49.412 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - null null
+2026-07-07 14:19:49.421 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:49.426 +02:00 [INF] HTTP OPTIONS /api/events/2002 responded 204 in 4.5339 ms
+2026-07-07 14:19:49.434 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/2002 - 204 null null 21.9138ms
+2026-07-07 14:19:49.437 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/2002 - null null
+2026-07-07 14:19:49.447 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:49.466 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:19:51.159 +02:00 [INF] Deleting event with Id 2002.
+2026-07-07 14:19:51.178 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:19:51.183 +02:00 [INF] Event with Id 2002 deleted successfully.
+2026-07-07 14:19:51.186 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:19:51.188 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:19:51.189 +02:00 [INF] HTTP DELETE /api/events/2002 responded 204 in 1741.5184 ms
+2026-07-07 14:19:51.191 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/2002 - 204 null null 1754.0398ms
+2026-07-07 14:19:59.702 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events - null null
+2026-07-07 14:19:59.710 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:59.711 +02:00 [INF] HTTP OPTIONS /api/events responded 204 in 1.1044 ms
+2026-07-07 14:19:59.715 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events - 204 null null 12.5925ms
+2026-07-07 14:19:59.717 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/events - application/json 60
+2026-07-07 14:19:59.725 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:19:59.726 +02:00 [INF] Executing endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:20:01.695 +02:00 [INF] Creating a new event with name tz.
+2026-07-07 14:20:01.758 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 100), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Events] ([Capacity], [Country], [Location], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-07-07 14:20:01.783 +02:00 [INF] Event created successfully with Id 5002.
+2026-07-07 14:20:01.786 +02:00 [INF] Setting HTTP status code 201.
+2026-07-07 14:20:01.789 +02:00 [INF] Writing value of type '<>f__AnonymousType2`1' as Json.
+2026-07-07 14:20:01.791 +02:00 [INF] Executed endpoint 'HTTP: POST /api/events/ => PostEvent'
+2026-07-07 14:20:01.792 +02:00 [INF] HTTP POST /api/events responded 201 in 2067.6465 ms
+2026-07-07 14:20:01.795 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/events - 201 null application/json; charset=utf-8 2077.9592ms
+2026-07-07 14:20:01.820 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/events - null null
+2026-07-07 14:20:01.825 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:20:01.827 +02:00 [INF] Executing endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:20:01.831 +02:00 [INF] Retrieving all events.
+2026-07-07 14:20:01.837 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Location], [e].[Country], [e].[Capacity]
+FROM [Events] AS [e]
+2026-07-07 14:20:01.841 +02:00 [INF] Successfully retrieved 12 events.
+2026-07-07 14:20:01.843 +02:00 [INF] Setting HTTP status code 200.
+2026-07-07 14:20:01.846 +02:00 [INF] Writing value of type 'List`1' as Json.
+2026-07-07 14:20:01.847 +02:00 [INF] Executed endpoint 'HTTP: GET /api/events/ => GetEvents'
+2026-07-07 14:20:01.848 +02:00 [INF] HTTP GET /api/events responded 200 in 23.1444 ms
+2026-07-07 14:20:01.851 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/events - 200 null application/json; charset=utf-8 30.8664ms
+2026-07-07 14:20:04.929 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7175/api/events/5002 - null null
+2026-07-07 14:20:04.941 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:20:04.943 +02:00 [INF] HTTP OPTIONS /api/events/5002 responded 204 in 1.4204 ms
+2026-07-07 14:20:04.949 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7175/api/events/5002 - 204 null null 19.2022ms
+2026-07-07 14:20:04.951 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7175/api/events/5002 - null null
+2026-07-07 14:20:04.958 +02:00 [INF] CORS policy execution successful.
+2026-07-07 14:20:04.960 +02:00 [INF] Executing endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:20:06.261 +02:00 [INF] Deleting event with Id 5002.
+2026-07-07 14:20:06.282 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [e]
+FROM [Events] AS [e]
+WHERE [e].[Id] = @id
+2026-07-07 14:20:06.285 +02:00 [INF] Event with Id 5002 deleted successfully.
+2026-07-07 14:20:06.288 +02:00 [INF] Setting HTTP status code 204.
+2026-07-07 14:20:06.290 +02:00 [INF] Executed endpoint 'HTTP: DELETE /api/events/{id:int} => DeleteEvent'
+2026-07-07 14:20:06.292 +02:00 [INF] HTTP DELETE /api/events/5002 responded 204 in 1333.7909 ms
+2026-07-07 14:20:06.297 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7175/api/events/5002 - 204 null null 1346.3964ms

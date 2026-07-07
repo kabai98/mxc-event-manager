@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Mxc.EventManager.Api.Contracts;
+﻿using Mxc.EventManager.Api.Contracts;
 using Mxc.EventManager.Api.DTOs;
 
 namespace Mxc.EventManager.Api.Endpoints;
@@ -8,8 +7,9 @@ public static class EventsEndpoints
 {
 	public static IEndpointRouteBuilder MapEventsEndpoints(this IEndpointRouteBuilder app)
 	{
-		var group = app.MapGroup("/api/events");
-					
+		var group = app.MapGroup("/api/events")
+					   .RequireAuthorization();
+
 
 		group.MapGet("/", GetEvents);
 		group.MapGet("/{id:int}", GetEventById);
@@ -24,18 +24,14 @@ public static class EventsEndpoints
 	{
 		var events = await service.GetListAsync();
 
-		return events is null
-			? Results.NotFound()
-			: Results.Ok(events);
+		return Results.Ok(events);
 	}
 
 	private static async Task<IResult> GetEventById(int id, IEventsService service)
 	{
 		var eventDto = await service.GetEventByIdAsync(id);
 
-		return eventDto is null
-			? Results.NotFound()
-			: Results.Ok(eventDto);
+		return Results.Ok(eventDto);
 	}
 
 	private static async Task<IResult> PutEvent(
@@ -44,19 +40,12 @@ public static class EventsEndpoints
 		IEventsService service)
 	{
 		if (id != eventDto.Id)
-			return Results.BadRequest();
-
-		try
 		{
-			await service.UpdateEvent(eventDto);
+			return Results.BadRequest(
+				new { error = "Route id and event id do not match." });
 		}
-		catch (DbUpdateConcurrencyException)
-		{
-			if (!await service.EventExistsAsync(id))
-				return Results.NotFound();
 
-			throw;
-		}
+		await service.UpdateEvent(eventDto);
 
 		return Results.NoContent();
 	}
@@ -65,9 +54,11 @@ public static class EventsEndpoints
 		EventDto eventDto,
 		IEventsService service)
 	{
-		await service.CreateEvent(eventDto);
+		 var id = await service.CreateEvent(eventDto);
 
-		return Results.Created($"/api/events/{eventDto.Id}", eventDto);
+		return Results.Created(
+			$"/api/events/{id}",
+			new { id });
 	}
 
 	private static async Task<IResult> DeleteEvent(

@@ -8,7 +8,7 @@ public interface IEventsService
 
 	Task<EventDto> GetEventByIdAsync(int id);
 
-	Task CreateEvent(EventDto eventDto);
+	Task<int> CreateEvent(EventDto eventDto);
 
 	Task DeleteEvent(int id);
 

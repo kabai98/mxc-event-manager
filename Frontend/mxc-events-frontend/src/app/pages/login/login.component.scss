@@ -1,7 +1,7 @@
 .login-wrapper {
   padding: 40px;
   max-width: 450px;
-  margin: 60px auto; /* Középre igazítja az oldalon */
+  margin: 60px auto;
   font-family: Roboto, sans-serif;
 
   h1 {
@@ -26,8 +26,6 @@
 
     mat-form-field {
       width: 100%;
-
-      // Szögletesebb sarkok az input mezőknek a konzisztencia miatt
       ::v-deep .mdc-notched-outline__leading,
       ::v-deep .mdc-notched-outline__notch,
       ::v-deep .mdc-notched-outline__trailing {
@@ -40,13 +38,13 @@
     margin-top: 24px;
 
     .login-btn {
-      background-color: #179cd8 !important; // A megszokott élénk kék szín
+      background-color: #179cd8 !important;
       color: white;
       padding: 12px 0;
       font-size: 16px;
       font-weight: 500;
       border-radius: 6px;
-      width: 100%; // Teljes szélességű gomb a tipikus login élményért
+      width: 100%;
       height: 48px;
 
       &:disabled {
