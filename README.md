@@ -18,6 +18,24 @@ Angular Material
 
 The goal of the project is to demonstrate a complete full-stack application with a separated backend and frontend architecture, database persistence, and user authentication.
 
+🖥️ Frontend Setup
+
+Navigate to the Angular application folder:
+
+cd Frontend/mxc-events-frontend
+
+Install the required dependencies (only needed for the first setup):
+
+npm install
+
+Start the Angular development server:
+
+ng serve
+
+The frontend will be available at:
+
+http://localhost:4200
+
 Before running the project, install:
 
 - .NET 10 SDK
