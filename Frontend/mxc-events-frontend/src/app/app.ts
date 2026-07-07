@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/components/header/header';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { Loading } from './shared/components/loading-spinner/loading/loading.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, Loading],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

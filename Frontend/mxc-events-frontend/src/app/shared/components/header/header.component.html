@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="header">
+  <!-- LEFT: logo -->
+  <div class="left">
+    <img src="img/logo.png" class="logo" />
+  </div>
+
+  <span class="spacer"></span>
+
+  <!-- RIGHT: user info -->
+  @if (isLoggedIn()) {
+    <div class="right">
+      <div class="email">{{ email() }}</div>
+      <button mat-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+    </div>
+  }
+</mat-toolbar>

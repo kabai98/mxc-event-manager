@@ -1,5 +1,4 @@
 <div class="container">
-  <!-- Fejléc és Új esemény gomb -->
   <div class="header-section">
     <h1>Events</h1>
     <button mat-flat-button color="primary" class="add-btn" (click)="onAddEvent()">
@@ -7,29 +6,30 @@
     </button>
   </div>
 
-  <!-- Material Táblázat -->
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z0 event-table">
-    <!-- Name Oszlop -->
+    <!-- Name col -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
       <td mat-cell *matCellDef="let element">{{ element.name }}</td>
     </ng-container>
 
-    <!-- Place Oszlop -->
-    <ng-container matColumnDef="place">
+    <!-- Place col -->
+    <ng-container matColumnDef="location">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>PLACE</th>
+
       <td mat-cell *matCellDef="let element">
-        {{ element.location }}, <span class="country-text">{{ element.country }}</span>
+        {{ element.location }},
+        <span class="country-text">{{ element.country }}</span>
       </td>
     </ng-container>
 
-    <!-- Capacity Oszlop -->
+    <!-- Capacity col -->
     <ng-container matColumnDef="capacity">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>CAPACITY</th>
       <td mat-cell *matCellDef="let element">{{ element.capacity }} ppl</td>
     </ng-container>
 
-    <!-- Actions Oszlop -->
+    <!-- Actions col -->
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
       <td mat-cell *matCellDef="let element">

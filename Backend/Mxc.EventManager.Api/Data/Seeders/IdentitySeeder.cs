@@ -23,7 +23,7 @@ public static class IdentitySeeder
 				{
 					UserName = u.Email,
 					Email = u.Email,
-					EmailConfirmed = true // különben login nem fog menni default beállításokkal
+					EmailConfirmed = true
 				};
 
 				var result =  await userManager.CreateAsync(user, u.Password);
