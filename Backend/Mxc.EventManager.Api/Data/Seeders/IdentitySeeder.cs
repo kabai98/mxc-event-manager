@@ -2,8 +2,18 @@
 
 namespace Mxc.EventManager.Api.Data.Seeders;
 
+/// <summary>
+/// Provides methods for seeding identity users.
+/// </summary>
 public static class IdentitySeeder
 {
+	/// <summary>
+	/// Seeds default identity users into the database if they do not already exist.
+	/// </summary>
+	/// <param name="userManager">The user manager used to create identity users.</param>
+	/// <exception cref="Exception">
+	/// Thrown when user creation fails.
+	/// </exception>
 	public static async Task SeedUsersAsync(UserManager<IdentityUser> userManager)
 	{
 		var users = new[]

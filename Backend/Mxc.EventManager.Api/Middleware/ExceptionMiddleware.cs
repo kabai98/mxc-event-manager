@@ -15,6 +15,10 @@ public class ExceptionMiddleware
 		_logger = logger;
 	}
 
+	/// <summary>
+	/// Handles incoming HTTP requests and converts exceptions into appropriate HTTP responses.
+	/// </summary>
+	/// <param name="context">The current HTTP request context.</param>
 	public async Task InvokeAsync(HttpContext context)
 	{
 		try

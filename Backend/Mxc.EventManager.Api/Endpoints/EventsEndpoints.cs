@@ -5,6 +5,11 @@ namespace Mxc.EventManager.Api.Endpoints;
 
 public static class EventsEndpoints
 {
+	/// <summary>
+	/// Maps the event-related API endpoints.
+	/// </summary>
+	/// <param name="app">The endpoint route builder used to register routes.</param>
+	/// <returns>The configured endpoint route builder.</returns>
 	public static IEndpointRouteBuilder MapEventsEndpoints(this IEndpointRouteBuilder app)
 	{
 		var group = app.MapGroup("/api/events")
