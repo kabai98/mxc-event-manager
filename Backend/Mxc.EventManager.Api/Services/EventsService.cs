@@ -19,6 +19,15 @@ namespace Mxc.EventManager.Api.Services
 			_logger = logger;
 		}
 
+
+		/// <summary>
+		/// Creates a new event and saves it to the database.
+		/// </summary>
+		/// <param name="eventDto">The event data to create.</param>
+		/// <returns>The ID of the created event.</returns>
+		/// <exception cref="ValidationException">
+		/// Thrown when the event data is invalid.
+		/// </exception>
 		public async Task<int> CreateEvent(EventDto eventDto)
 		{
 			ValidateEventDto(eventDto);
@@ -51,6 +60,12 @@ namespace Mxc.EventManager.Api.Services
 			}
 		}
 
+		/// <summary>
+		/// Deletes an existing event by its ID.
+		/// </summary>
+		/// <param name="id">The ID of the event to delete.</param>
+		/// <exception cref="NotFoundException">
+		/// Thrown when the event does not exist.
 		public async Task DeleteEvent(int id)
 		{
 			_logger.LogInformation("Deleting event with Id {EventId}.", id);
@@ -85,12 +100,20 @@ namespace Mxc.EventManager.Api.Services
 			}
 		}
 
+		/// <summary>
+		/// Retrieves a single event by its ID.
+		/// </summary>
+		/// <param name="id">The ID of the event to retrieve.</param>
+		/// <returns>The event data as a DTO.</returns>
+		/// <exception cref="NotFoundException">
+		/// Thrown when the event cannot be found
 		public async Task<EventDto> GetEventByIdAsync(int id)
 		{
 			_logger.LogInformation("Retrieving event with Id {EventId}.", id);
 
-			var eventt = await _context.Events
+			var @event = await _context.Events
 				.Where(e => e.Id == id)
+
 				.Select(e => new EventDto
 				{
 					Id = e.Id,
@@ -102,12 +125,16 @@ namespace Mxc.EventManager.Api.Services
 				.AsNoTracking()
 				.FirstOrDefaultAsync();
 
-			if (eventt == null)
+			if (@event == null)
 				throw new NotFoundException("Event not found");
 
-			return eventt;
+			return @event;
 		}
 
+		/// <summary>
+		/// Retrieves all available events.
+		/// </summary>
+		/// <returns>A list of event DTOs.</returns>
 		public async Task<List<EventDto>> GetListAsync()
 		{
 			_logger.LogInformation("Retrieving all events.");
@@ -129,6 +156,13 @@ namespace Mxc.EventManager.Api.Services
 			return events;
 		}
 
+
+		/// <summary>
+		/// Updates an existing event with new data.
+		/// </summary>
+		/// <param name="eventDto">The updated event information.</param>
+		/// <exception cref="NotFoundException">
+		/// Thrown when the event does not exist.
 		public async Task UpdateEvent(EventDto eventDto)
 		{
 			ValidateEventDto(eventDto);
@@ -165,11 +199,6 @@ namespace Mxc.EventManager.Api.Services
 
 				throw;
 			}
-		}
-
-		public async Task<bool> EventExistsAsync(int id)
-		{
-			return await _context.Events.AnyAsync(e => e.Id == id);
 		}
 
 		private static void  ValidateEventDto(EventDto eventDto)

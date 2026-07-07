@@ -14,6 +14,10 @@ public class IdentitySeederHostedService : IHostedService
 		_logger = logger;
 	}
 
+	/// <summary>
+	/// Starts the hosted service and seeds default identity users.
+	/// </summary>
+	/// <param name="cancellationToken">A token used to signal cancellation.</param>
 	public async Task StartAsync(CancellationToken cancellationToken)
 	{
 		try
@@ -35,6 +39,11 @@ public class IdentitySeederHostedService : IHostedService
 			throw;
 		}
 	}
+
+	/// <summary>
+	/// Stops the hosted service.
+	/// </summary>
+	/// <param name="cancellationToken">A token used to signal cancellation.</param>
 
 	public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
 }
