@@ -47,6 +47,19 @@ ASP.NET Core Identity is responsible for creating and managing users, including 
 
 The database structure is maintained through EF Core migrations, while user management is handled by ASP.NET Core Identity.
 
+👤 Demo Users
+
+For development and testing purposes, the application creates predefined users during startup.
+
+The demo user credentials are defined in the application code and can be found in the user initialization section.
+
+Example accounts:
+
+Email	Password
+admin@test.com	Admin123
+user@test.com	User1234
+user@test2.com	User1234
+
 Before running the project, install:
 
 - .NET 10 SDK
