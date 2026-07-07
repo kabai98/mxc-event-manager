@@ -36,6 +36,17 @@ The frontend will be available at:
 
 http://localhost:4200
 
+
+🗄️ Database and Initialization
+
+The project uses Entity Framework Core migrations to create and update the database structure.
+
+When the migrations are applied, the required database tables are created, including the tables needed for event management.
+
+ASP.NET Core Identity is responsible for creating and managing users, including user registration and authentication.
+
+The database structure is maintained through EF Core migrations, while user management is handled by ASP.NET Core Identity.
+
 Before running the project, install:
 
 - .NET 10 SDK
