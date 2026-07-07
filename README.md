@@ -55,10 +55,13 @@ The demo user credentials are defined in the application code and can be found i
 
 Example accounts:
 
-Email	Password
-admin@test.com	Admin123
-user@test.com	User1234
-user@test2.com	User1234
+Email	 | Password
+
+admin@test.com | Admin123
+
+user@test.com |	User1234
+
+user@test2.com |	User1234
 
 Before running the project, install:
 
