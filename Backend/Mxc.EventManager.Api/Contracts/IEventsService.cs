@@ -13,6 +13,4 @@ public interface IEventsService
 	Task DeleteEvent(int id);
 
 	Task UpdateEvent(EventDto eventDto);
-
-	Task<bool> EventExistsAsync(int id);
 }

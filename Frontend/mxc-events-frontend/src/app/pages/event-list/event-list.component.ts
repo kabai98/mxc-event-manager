@@ -43,6 +43,9 @@ export class EventListComponent implements OnInit {
     this.dataSource.data = this.dataSource.data.filter((e) => e.id !== id);
 
     this.eventService.deleteEvent(id).subscribe({
+         next: () => {
+        this.toast.success('Event deleted successfully!');
+      },
       error: () => {
         this.toast.error('Error while deleting the event!');
         this.dataSource.data = oldEvents;
